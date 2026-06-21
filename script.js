@@ -270,7 +270,7 @@ function renderUpcoming(){
         const div = document.createElement("div");
         div.className = "event";
 
-        const dateFormatted = new Date(e.date).toLocaleDateString("es-UY");
+        const dateFormatted = new Date(e.date + "T00:00:00").toLocaleDateString("es-UY");
 
         div.innerHTML = `
             <span>📌 ${dateFormatted} ${e.time} — ${e.title}</span>

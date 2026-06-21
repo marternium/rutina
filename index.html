@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌸 Agenda de Mar</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="topbar">
+            <h1>🌸 Agenda de Mar</h1>
+            <p id="date"></p>
+        </header>
+
+        <section class="kaly">
+            <div class="kaly-icon">🐶</div>
+            <div>
+                <h3>Kaly</h3>
+                <p id="kalyText"></p>
+            </div>
+        </section>
+
+        <section class="nowBox">
+            <div class="now">
+                <h3>⏰ Ahora</h3>
+                <p id="nowEvent">-</p>
+            </div>
+
+            <div class="next">
+                <h3>➡️ Próximo</h3>
+                <p id="nextEvent">-</p>
+            </div>
+        </section>
+
+        <section class="stats">
+
+            <div class="xpBox">
+                <div class="level">
+                    ⭐ Nivel <span id="level">1</span> — <span id="title">Novata del Orden</span>
+                </div>
+
+                <div class="xpBar">
+                    <div id="xpFill"></div>
+                </div>
+
+                <small id="xpText"></small>
+            </div>
+
+            <div class="progressBox">
+                <div class="progressBar">
+                    <div id="progressFill"></div>
+                </div>
+                <small id="progressText"></small>
+            </div>
+
+        </section>
+
+        <main class="agenda">
+
+            <h2>📅 Agenda del día</h2>
+            <div id="schedule"></div>
+
+        </main>
+
+        <section class="agenda">
+
+            <h2>📆 Próximos eventos</h2>
+            <div id="upcoming"></div>
+
+        </section>
+
+        <section class="addEvent">
+            <h2>➕ Evento personalizado</h2>
+
+            <input id="eventTitle" placeholder="Ej: Neurólogo" />
+
+            <input id="eventDate" type="date" />
+
+            <input id="time" type="time" />
+
+            <button onclick="addEvent()">Agregar</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+:root{
+  --rosa:#ffd6e7;
+  --lila:#e6d6ff;
+  --celeste:#d6f3ff;
+  --verde:#d8ffe2;
+  --crema:#fffdf8;
+  --texto:#444;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI;
+}
+
+body{
+  background:linear-gradient(135deg,var(--rosa),var(--celeste),var(--lila));
+  min-height:100vh;
+  padding:20px;
+}
+
+.app{
+  max-width:900px;
+  margin:auto;
+  background:rgba(255,255,255,0.85);
+  border-radius:20px;
+  padding:20px;
+  backdrop-filter:blur(10px);
+}
+
+.topbar{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.kaly{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  background:white;
+  padding:15px;
+  border-radius:15px;
+  margin-bottom:15px;
+}
+
+.kaly-icon{
+  font-size:40px;
+}
+
+.stats{
+  margin-bottom:20px;
+}
+
+.xpBox,.progressBox{
+  background:white;
+  padding:10px;
+  border-radius:15px;
+  margin-bottom:10px;
+}
+
+.xpBar,.progressBar{
+  height:14px;
+  background:#eee;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+#xpFill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#ff9ecf,#caa8ff);
+}
+
+#progressFill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#9be7ff,#ffb8d9);
+}
+
+.agenda{
+  margin-top:20px;
+}
+
+.event{
+  display:flex;
+  justify-content:space-between;
+  background:white;
+  padding:10px;
+  border-radius:12px;
+  margin-bottom:8px;
+  cursor:pointer;
+}
+
+.event.done{
+  background:var(--verde);
+  text-decoration:line-through;
+}
+
+.addEvent{
+  margin-top:20px;
+  background:white;
+  padding:15px;
+  border-radius:15px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.addEvent input,button{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+}
+
+button{
+  background:var(--lila);
+  cursor:pointer;
+}
+
+@media(max-width:600px){
+  .app{padding:10px;}
+}
+
+.event{
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  margin-bottom:8px;
+  border-radius:12px;
+  background:white;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.event:hover{
+  transform:scale(1.01);
+}
+
+.event.done{
+  background:#d8ffe2;
+  opacity:0.7;
+  text-decoration: line-through;
+}
+
+.nowBox{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.now, .next{
+  background:white;
+  padding:12px;
+  border-radius:12px;
+}
+
+@media(max-width:600px){
+  .nowBox{
+    grid-template-columns:1fr;
+  }
+}
+
+.past{
+  opacity:0.4;
+}
+
+.current{
+  border:2px solid #ff9ecf;
+}
+
+#upcoming .event{
+  background:#f3f3ff;
+  border-left:4px solid #a5a5ff;
+}

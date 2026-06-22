@@ -16,11 +16,17 @@ if (data.lastDate !== today) {
 
     const newEvents = generateDailyEvents();
 
+    // mantener eventos futuros del usuario
+    const futureEvents = data.events.filter(e => e.date > today);
+
     data.events = [
-        ...newEvents
+        ...newEvents,
+        ...futureEvents
     ];
 
     data.lastDate = today;
+
+    save();
 }
 
 function generateDailyEvents() {
@@ -199,7 +205,6 @@ function addEvent() {
     const time = document.getElementById("time").value;
 
     if (!title || !date || !time) return;
-    
 
     data.events.push({
         title,

@@ -16,12 +16,13 @@ if (data.lastDate !== today) {
 
     const newEvents = generateDailyEvents();
 
-    // mantener eventos futuros del usuario
-    const futureEvents = data.events.filter(e => e.date > today);
+    const customEvents = data.events.filter(
+        e => e.type === "custom"
+    );
 
     data.events = [
         ...newEvents,
-        ...futureEvents
+        ...customEvents
     ];
 
     data.lastDate = today;
